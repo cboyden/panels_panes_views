@@ -1,0 +1,6 @@
+name = Panels Panes Views Integration
+description = Provides Views integration for Panels panes of all types.
+core = 7.x
+package = Panels
+dependencies[] = views:views
+dependencies[] = panels:panels

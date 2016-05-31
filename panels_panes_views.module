@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Provides Views integration for panel panes of all types.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help.
+ * @param arg
+ *   Array that holds the current path as returned from arg() function.
+ */
+function panels_panes_views_help($path, $arg) {
+  switch ($path) {
+    case "admin/help#panels_panes_views":
+      return '' . t("Help would go here.") . '';
+
+    break;
+  }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function panels_panes_views_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'panels_panes_views') . '/includes/views',
+  );
+}
